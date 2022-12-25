@@ -1,0 +1,19 @@
+{
+    "mongoCred": {
+        "secret": "applesun",
+        "mongoDBconnectionStr":
+          "mongodb://localhost:27017/freeService"
+    },
+    "googleCred":{
+        "host": "smtp.googlemail.com",
+        "port": 465,
+        "secure": true,
+        "auth": {
+            "user": "v*********@****.***",
+            "pass": "************"
+        },
+        "tls":{
+            "rejectUnauthorized": false
+        }
+    }
+}
