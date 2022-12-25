@@ -41,8 +41,6 @@ app.use(function(err, req, res, next) {
 const start = async () => {
   try {
     await dbConnection.connection();
-    // Listening to the port
-    // app.listen(PORT, () => console.log(`http://localhost:${PORT}`));
   } catch (error) {
     console.error(error);
   }
