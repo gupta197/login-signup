@@ -4,29 +4,25 @@ const { Schema, model } = mongoose;
 
 const userSchema = new Schema(
   {
-   
     first_name: {
-        type: String,
-        required: true
-      },
-      last_name: {
-        type: String
-      },
-      email:{
-        type: String,
-        required: true
-      },
-      password:{
-        type: String,
-        required: true
-      },
-    //   name: { type: String, default: 'hahaha' },
-    //   age: { type: Number, min: 18, index: true },
-    //   bio: { type: String, match: /[a-z]/ },
-    //   date: { type: Date, default: Date.now },
-    //   buff: Buffer,
-      createdAt:{ type: Date, default: Date.now },
-      updateddAt:{ type: Date, default: Date.now }
+      type: String,
+      required: true
+    },
+    last_name: {
+      type: String
+    },
+    email: {
+      type: String,
+      unique: true,
+      required: true,
+    },
+    password: {
+      type: String,
+      minlength: 6,
+      required: true,
+    },
+    createdAt: { type: Date, default: Date.now },
+    updateddAt: { type: Date, default: Date.now }
   }
 );
 
